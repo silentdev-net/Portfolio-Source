@@ -213,6 +213,35 @@ ul {
     transform: translateY(-3px);
 }
 
+.tooltip-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #111;
+    border: 1px solid var(--border-color);
+    color: #ccc;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tooltip-wrap:hover .tooltip-text {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
 
 .col-right {
     padding-left: 20px;
