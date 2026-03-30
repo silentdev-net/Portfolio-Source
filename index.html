@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent | Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" id="favicon" type="image/png" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .tooltip-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .tooltip-text {
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%) translateY(4px);
+            background: #111;
+            border: 1px solid #222;
+            color: #ccc;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            z-index: 10;
+        }
+
+        .tooltip-wrap:hover .tooltip-text {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <canvas id="dot-canvas"></canvas>
+    <main class="grid-container">
+        <div class="col-left">
+            <div class="profile-header discord-wrapper">
+                <div class="discord-avatar-container">
+                    <img id="discord-avatar" src="" alt="Discord PFP" class="discord-avatar" style="display: none;">
+                    <img id="discord-deco" src="" alt="Discord Decoration" class="discord-deco" style="display: none;">
+                    <div id="discord-dot" class="discord-status-dot"></div>
+                </div>
+                <div class="discord-text">
+                    <span id="discord-name" class="logo">Loading...</span>
+                    <span id="discord-rpc" class="subtitle">...</span>
+                </div>
+            </div>
+            <p class="bio">
+                I like to code, game hacking and just tech in general. Free to hire for coding projects/developing i can
+                code anything you want, just contact me by email or discord.
+            </p>
+
+            <div class="skill-list">
+                <span class="skill-tag">C++ - advanced (mem manipulation)</span>
+                <span class="skill-tag">Python - advanced</span>
+                <span class="skill-tag">C - learning</span>
+                <span class="skill-tag">C# - intermediate</span>
+                <span class="skill-tag">Assembly - learning</span>
+                <span class="skill-tag">Kernel Drivers - Upper Intermediate</span>
+                <span class="skill-tag">Reverse Engineering - learning</span>
+            </div>
+
+            <div class="social-links">
+                <div class="tooltip-wrap">
+                    <a href="https://discord.com/users/1427579035776716851" target="_blank"><i
+                            class="fab fa-discord"></i></a>
+                    <span class="tooltip-text">Discord Profile</span>
+                </div>
+                <div class="tooltip-wrap">
+                    <a href="mailto:contact@silentdev.net"><i class="fas fa-envelope"></i></a>
+                    <span class="tooltip-text">contact@silentdev.net</span>
+                </div>
+                <div class="tooltip-wrap">
+                    <a href="https://github.com/silentdev-net/Portfolio-Source/" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                    <span class="tooltip-text">Portfolio Source</span>
+                </div>
+            </div>
+            <div class="section-label"
+                style="margin-top: 0; border-top: 1px solid var(--border-color); padding-top: 10px;">Working On</div>
+            <div class="timeline" style="margin-bottom: 2rem;">
+                <div class="timeline-item">
+                    <h3>Permanent HWID spoofer</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="section-label">Projects</div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">Driver</span>
+                    <h3>Kernel Cheat Driver</h3>
+                    <p>A kernel driver that uses techniques to bypass anticheats, features reading operations to read
+                        game memory.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Cheat</span>
+                    <h3>Fortnite External</h3>
+                    <p>External cheat for Fortnite, featuring aimbot and ESP. Its read only for less detections and uses my own driver</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Cheat</span>
+                    <h3>Rust External</h3>
+                    <p>External cheat for Rust, having world esp, aimbot, ESP. Also read only for less detections and uses my own driver</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Cheat</span>
+                    <h3>Valorant Colorbot</h3>
+                    <p>Uses HSV/RGB color detection to detect enemy outlines in valorant. Has aimbot and triggerbot.
+                        Simulates humanized mouse movement with a makcu. Also contains a web panel to edit the settings.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Cheat</span>
+                    <h3>FiveM External</h3>
+                    <h4>GTAV Framework</h4>
+                    <p>External cheat solution optimized for performance, quality and stealth. Featuring aimbot esp and
+                        world/rage features.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Cheat</span>
+                    <h3>Roblox External</h3>
+                    <p>External cheat for Roblox, featuring an external executor, FFlag editor and the standard features
+                        (Aimbot, ESP, World stuff etc). Optimized for
+                        functionality and
+                        performance.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
